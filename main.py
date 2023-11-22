@@ -88,7 +88,7 @@ def calc_condition(exp, days, severity_dict):
 # Function to load severity data from CSV
 def getSeverityDict():
     severityDictionary = {}
-    with open('MasterData/symptom_severity.csv') as csv_file:
+    with open('MasterData/severity.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         for row in csv_reader:
             if row:  # Check if row is not empty
