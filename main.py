@@ -27,7 +27,7 @@ def get(path: str):
 
 
 home_path = get('./home.json')
-# login_path = get('./login.json')
+login_path = get('./login.json')
 # success_path = get('./success.json')
 
 training = pd.read_csv('Data/Training.csv')
@@ -275,15 +275,15 @@ def main():
         # Your home page content goes here
 
     elif choice == "Login":
-        st.subheader("Login Section")
-        
+        st_lottie(login_path)
+
         username = st.sidebar.text_input("User Name")
         password = st.sidebar.text_input("Password", type='password')
 
         if st.sidebar.checkbox("Login"):
             if username == "Priyadharshini" and password == "samplepass":
                 st.success("Logged In as {}".format(username))
-
+                
                 # Your application code goes here
                 user_input = st.text_input(
                     "Enter your symptoms separated by comma")  # Get user symptoms
