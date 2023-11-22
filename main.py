@@ -28,7 +28,6 @@ def get(path: str):
 
 home_path = get('./home.json')
 login_path = get('./Login.json')
-# success_path = get('./success.json')
 
 training = pd.read_csv('Data/Training.csv')
 testing = pd.read_csv('Data/Testing.csv')
