@@ -10,8 +10,24 @@ from sklearn.svm import SVC
 import csv
 import warnings
 import streamlit as st
+from streamlit_lottie import st_lottie
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
+
+st.set_page_config(
+    page_title="HealthCare ChatBot",
+    page_icon="🧊"
+)
+
+
+def get(path: str):
+    with open(path, 'r') as f:
+        return json.load(f)
+
+
+home_path = get('./home.json')
+login_path = get('./login.json')
+success_path = get('./success.json')
 
 training = pd.read_csv('Data/Training.csv')
 testing= pd.read_csv('Data/Testing.csv')
